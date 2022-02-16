@@ -7,7 +7,7 @@ import Config
 # Run `mix help test` for more information.
 config :welcome, Welcome.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "mysecretpassword",
   hostname: "localhost",
   database: "welcome_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
@@ -19,9 +19,6 @@ config :welcome, WelcomeWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   secret_key_base: "5tWIq/zv9w2f14qf9YWGec8uswtEg6rhNr1gZz34O2/KEH/IOgHsaJUoGforsBo0",
   server: false
-
-# In test we don't send emails.
-config :welcome, Welcome.Mailer, adapter: Swoosh.Adapters.Test
 
 # Print only warnings and errors during test
 config :logger, level: :warn

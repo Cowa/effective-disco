@@ -1,9 +1,10 @@
 defmodule Welcome do
-  @moduledoc """
-  Welcome keeps the contexts that define your domain
-  and business logic.
+  alias Welcome.Data.AggregateCategoryByContinent
+  alias Welcome.Repo
 
-  Contexts are also responsible for managing your data, regardless
-  if it comes from the database, an external API or others.
-  """
+  import Ecto.Query
+
+  def category_by_continent do
+    Repo.all(from(AggregateCategoryByContinent))
+  end
 end
