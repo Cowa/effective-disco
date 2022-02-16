@@ -4,7 +4,6 @@ defmodule Welcome.GeoCoding.ContinentsTest do
   alias Welcome.GeoCoding.Continents
 
   test "should find the rigth continent given a latitude and a longitude" do
-    # Inverted lat long??
     # München
     assert_continent(48.1392154, 11.5781413, :europe)
     # Paris

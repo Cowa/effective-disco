@@ -3,7 +3,7 @@ defmodule Welcome.Repo.Migrations.CreateJobCategoriesByContinentView do
 
   def up do
     execute """
-    CREATE VIEW job_categories_by_continent AS
+    CREATE VIEW aggregate_categories_by_continent AS
 
       SELECT p.category_name, l.continent, count(*)
       FROM job_offers j
@@ -17,7 +17,7 @@ defmodule Welcome.Repo.Migrations.CreateJobCategoriesByContinentView do
 
   def down do
     execute """
-    DROP VIEW job_categories_by_continent;
+    DROP VIEW aggregate_categories_by_continent;
     """
   end
 end
