@@ -4,7 +4,6 @@ defmodule Welcome.Data.JobOffer do
   alias Welcome.Data.{Location, Profession}
 
   schema "job_offers" do
-    # profession_id, contract_type, name, office_latitude, office_longitude
     field :name, :string
     field :contract_type, :string
 
