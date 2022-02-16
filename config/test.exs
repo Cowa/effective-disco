@@ -20,9 +20,6 @@ config :welcome, WelcomeWeb.Endpoint,
   secret_key_base: "5tWIq/zv9w2f14qf9YWGec8uswtEg6rhNr1gZz34O2/KEH/IOgHsaJUoGforsBo0",
   server: false
 
-# In test we don't send emails.
-config :welcome, Welcome.Mailer, adapter: Swoosh.Adapters.Test
-
 # Print only warnings and errors during test
 config :logger, level: :warn
 

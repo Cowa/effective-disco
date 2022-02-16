@@ -1,17 +1,15 @@
 defmodule Welcome.Repo.Migrations.AddJobOffersTable do
   use Ecto.Migration
 
-  def change
-    # Table holding decoded data from lat/long
+  def change do
     create table(:locations) do
-      add :continent, :string
-      add :country, :string
-      add :postcode, :string
-      # ... we could add more data if needed (road, house_number...)
+      add :continent, :string, default: "Unknown"
 
       add :latitude, :float
       add :longitude, :float
     end
+
+    create index(:locations, [:latitude, :longitude], unique: true)
 
     create table(:job_offers) do
       add :name, :string
