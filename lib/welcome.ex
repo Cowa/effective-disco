@@ -5,6 +5,6 @@ defmodule Welcome do
   import Ecto.Query
 
   def category_by_continent do
-    Repo.all(from(cbc in AggregateCategoryByContinent))
+    Repo.all(from(AggregateCategoryByContinent))
   end
 end

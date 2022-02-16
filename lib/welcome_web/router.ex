@@ -20,10 +20,11 @@ defmodule WelcomeWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", WelcomeWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", WelcomeWeb.API do
+    pipe_through :api
+
+    get "/aggregate_job", AggregateJobController, :index
+  end
 
   # Enables LiveDashboard only for development
   #
