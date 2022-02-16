@@ -3,9 +3,6 @@ defmodule Welcome.Data.Location do
 
   schema "locations" do
     field :continent, :string
-    field :country, :string
-    field :postcode, :string
-
     field :latitude, :float
     field :longitude, :float
   end

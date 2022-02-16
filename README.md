@@ -1,6 +1,8 @@
-# Welcome, technical test
+# Effective disco
 
-# How to run
+## WTTJ Technical test
+
+## How to run
 
   * Install dependencies with `mix deps.get`
   * Spawn a pre-configurated a PostgresSQL DB with `docker-compose up`
