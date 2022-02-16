@@ -3,7 +3,7 @@ defmodule Welcome.Repo.Migrations.AddJobOffersTable do
 
   def change do
     create table(:locations) do
-      add :continent, :string, default: "Unknown"
+      add :continent, :string, default: "unknown"
 
       add :latitude, :float
       add :longitude, :float

@@ -21,7 +21,7 @@ File.stream!("priv/data/technical-test-jobs.csv")
   job_data = [_, _, _, "", ""] ->
     # Upsert
     location =
-      Repo.insert!(%Location{continent: "Unknown"},
+      Repo.insert!(%Location{continent: "unknown"},
         on_conflict: [set: [latitude: nil, longitude: nil]],
         conflict_target: [:latitude, :longitude]
       )
@@ -34,7 +34,7 @@ File.stream!("priv/data/technical-test-jobs.csv")
     location =
       case Continents.find_continent(lat, long) do
         nil ->
-          %Location{continent: "Unknown", latitude: lat, longitude: long}
+          %Location{continent: "unknown", latitude: lat, longitude: long}
 
         continent ->
           continent_name = continent |> elem(0) |> Atom.to_string()

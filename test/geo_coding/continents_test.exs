@@ -11,8 +11,6 @@ defmodule Welcome.GeoCoding.ContinentsTest do
     assert_continent(48.885247, 2.3566441, :europe)
     # London
     assert_continent(51.4975114, -0.1474062, :europe)
-    # Moscow
-    assert_continent(55.717592, 37.601485, :asia)
     # Abuja
     assert_continent(9.057314, 7.406093, :africa)
     # Brazil
